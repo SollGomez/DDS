@@ -1,12 +1,17 @@
 package ar.edu.utn.frba.dds;
 
 
-// Como usuarie de QuéMePongo, quiero evitar que haya prendas cuya categoría no
-// se condiga con su tipo. (Ej, una remera no puede ser calzado).
-public class TipoDePrenda {
-  Categoria categoria;
+public enum TipoDePrenda {
+  REMERA(Categoria.PARTE_SUPERIOR),
+  POLLERA(Categoria.PARTE_INFERIOR),
+  PANTALON(Categoria.PARTE_INFERIOR),
+  GORRA(Categoria.ACCESORIO),
+  CROCS(Categoria.CALZADO),
+  BOTAS(Categoria.CALZADO);
 
-  public TipoDePrenda (Categoria categoria) {
+  final Categoria categoria;
+
+  TipoDePrenda (Categoria categoria) {
     this.categoria = categoria;
   }
 }

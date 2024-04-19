@@ -1,20 +1,17 @@
 package ar.edu.utn.frba.dds;
 
-import static ar.edu.utn.frba.dds.Categoria.*;
-import static ar.edu.utn.frba.dds.Material.*;
-import static ar.edu.utn.frba.dds.Color.*;
+import static ar.edu.utn.frba.dds.TipoDePrenda.*;
 
 
 public class Main {
   public static void main(String[] args) {
 
-    //  Prenda(TipoDePrenda tipoPrenda, Material tela, Color colorPrimario, Color colorSecundario)
+    // Prenda(TipoDePrenda tipoPrenda, AspectoMaterial aspectoMaterial)
+    // AspectoMaterial(Color colorPrimario, Color colorSecundario, Material tela, Trama trama)
 
-    TipoDePrenda pollera = new TipoDePrenda(Categoria.PARTE_INFERIOR);
-    TipoDePrenda remera = new TipoDePrenda(Categoria.PARTE_SUPERIOR);
-    TipoDePrenda gorra = new TipoDePrenda(Categoria.ACCESORIO);
+      Prenda polleraAmarilla = new Prenda(POLLERA, new AspectoMaterial(Color.AMARRILLO, null, Material.ALGODON, null));
 
-    Prenda miPolleraAmarilla = new Prenda (pollera, ALGODON, AMARRILLO, null);
+    System.out.println(polleraAmarilla.aspectoMaterial.trama);
 
-}
+  }
 }
