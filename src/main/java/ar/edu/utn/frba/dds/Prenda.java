@@ -7,12 +7,14 @@ public class Prenda {
 
 
   public Prenda(TipoDePrenda tipoPrenda, AspectoMaterial aspectoMaterial) {
-    if (tipoPrenda == null) {
-      throw new IllegalArgumentException("Tipo de prenda es Obligatorio");
-    }
     this.tipoPrenda = tipoPrenda;
     this.aspectoMaterial = aspectoMaterial;
   }
+
+  public TipoDePrenda getTipoDePrenda() {
+    return tipoPrenda;
+  }
+
 }
 
 
